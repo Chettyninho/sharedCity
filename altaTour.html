@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>altaTour</title>
+    </head>
+    <body>
+        <header></header>
+        <main>
+            <h1>Alta TOUR</h1>
+            <form>
+                <div class="col-md-3">
+                    <label for="inputPassword4" class="form-label">CIUDAD</label>
+                    <input type="text" th:field="..." />
+                </div>
+                <div class="col-md-3">
+                    <label for="inputPassword4" class="form-label">Precio por persona</label>
+                    <input type="number" th:field="..." />
+                </div>
+                <div class="col-md-3">
+                    <label for="inputPassword4" class="form-label">Numero de asistentes</label>
+                    <input type="number" th:field="..." />
+                </div>
+                <div class="col-md-3">
+                    <label for="inputPassword4" class="form-label">Fecha y hora (fecha en la que se hara el tour)</label>
+                    <input type="datetime" th:field="..." />
+                </div>
+                <div class="col-md-3">
+                    <label for="inputPassword4" class="form-label">Duracion</label>
+                    <input type="time" th:field="..." />
+                </div>
+                <div class="barrabusqueda">
+                    <label for="inputPassword4" class="form-label">PUNTO DE INTERES</label>
+                    <button type="search" th:field="..." ><p>buscar</p><P>API que busque el punto de interes y asi obtener coordenads de google maps que es lo que pasaremos a la aplicacion</P>
+                </div>
+                <p>el id_guia lo pasamos ya que lo conocemos puesto que la sesion esta iniciada</p>
+            </form>
+        </main>
+        <a href="crud">Volver?</a>
+        <footer></footer>
+    </body>
+
+</html>

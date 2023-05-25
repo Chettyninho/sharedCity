@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this template
+-->
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>Pagina Inicio</title>
+        <meta charset="UTF-8">
+<!-- Bootstrap CSS v5.2.1 -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+<!-- Bootstrap CSS v5.2.1 -->
+    </head>
+    <body class="container">
+<!-- navbar  -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+<div class="container">
+    <form action="#" th:action="@{/modificarguia}" th:object="${guia}" method="post">
+        <div class="form-group">
+            <label for="nombre">ID</label>
+            <p><input type="hidden" name="codcliente" th:field="*{id}" /></p>
+            
+            <label for="nombre">DNI</label>
+            <input type="text" class="form-control" th:field="*{dni}"  />
+            <label for="nombre">Nombre</label>
+            <input type="text" class="form-control" th:field="*{nombre_guia}"  />
+            <label for="nombre">Apellido 1</label>
+            <input type="text" class="form-control" th:field="*{apellido_guia_1}"  />
+            <label for="nombre">Apellido 2</label>
+            <input type="text" class="form-control" th:field="*{apellido_guia_2}"  />
+            <label for="nombre">vALORACION</label>
+            <input type="number" class="form-control" th:field="*{valoracion_guia}"  />
+            <label for="nombre">Ciudad de residencia</label>
+            <input type="text" class="form-control" th:field="*{ciudad_residencia}"  />
+            <label for="nombre">email</label>
+            <input type="text" class="form-control" th:field="*{email}"  />
+            <label for="nombre">contraseña</label>
+            <input type="text" class="form-control" th:field="*{contraseña}"  />
+            <label for="nombre">IDIOMAS</label>
+            <input type="text" class="form-control" th:field="*{idiomas}"  />
+            
+        </div>
+        <!-- Agregar otros campos del formulario -->
+        <div class ="py-3">
+            <button type="submit" class="btn btn-primary col-12">Enviar</button>
+        </div>
+    </form>
+    <a href="listarguias">Atras</a>
+    <a href="crud">Menu principal</a>
+</div>
+
+
+<!-- Bootstrap JavaScript Libraries -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+    integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+    integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
+  </script>
+</        
+<!-- Bootstrap JavaScript Libraries -->
+    </body>
+</html>
+

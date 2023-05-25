@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>altaGuia</title>
+    </head>
+    <body>
+        <header></header>
+        <main>
+            <h1>Alta Guia</h1>
+            <form th:action="@{/altaguia}" th:object = "${g1}" method = "post">
+                <div class="col-md-3">
+                    <label for="inputPassword4" class="form-label">DNI</label>
+                    <input type="text" th:field="*{dni}" />
+                </div>
+                <div class="col-md-3">
+                    <label for="inputPassword4" class="form-label">NOMBRE</label>
+                    <input type="text" th:field="*{nombre_guia}" />
+                </div>
+                <div class="col-md-3">
+                    <label for="inputPassword4" class="form-label">APELLIDO 1</label>
+                    <input type="text" th:field="*{apellido_guia_1}" />
+                </div>
+                <div class="col-md-3">
+                    <label for="inputPassword4" class="form-label">APELLIDO 2</label>
+                    <input type="text" th:field="*{apellido_guia_2}" />
+                </div>
+                <div class="col-md-3">
+                    <label for="inputPassword4" class="form-label">VALORACION</label>
+                    <input type="number" th:field="*{valoracion_guia}" />
+                </div>
+                <div class="col-md-3">
+                <label for="inputPassword4" class="form-label" ID="id_ciudad">CIUDAD DE RESIDENCIA</label>
+                <select class="form-control" id="periodo" name="idCiudad" th:field="${g1.id_ciudadResidencia}">
+                  <option th:each="p : ${periodos}"
+                    th:value="${p.id}"
+                    th:text="${p.nombre}">
+                  </option>
+                </select>
+                    
+                </div>
+                <div class="col-md-3">
+                    <label for="inputPassword4" class="form-label">IDIOMAS(escribelos separados por comas)</label>
+                    <input type="text" th:field="*{idiomas}" />
+                </div>
+                <div class="col-md-3">
+                    <label for="inputPassword4" class="form-label">email</label>
+                    <input type="email" th:field="*{email}" />
+                </div>
+                <div class="col-md-3">
+                    <label for="inputPassword4" class="form-label">Contraseña</label>
+                    <input type="password" th:field="*{contraseña}" />
+                </div>
+                <div class="col-6 ">
+                    <button type="submit" class="btn btn-primary" >Sign in</button>
+                    
+                </div>
+                <div class="col-6">
+                    <button type="reset" value="Reset">RESET</button>
+                </div>
+            </form>
+        </main>
+        <a href="crud">Volver?</a>
+        <footer></footer>
+    </body>
+
+</html>

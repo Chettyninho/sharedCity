@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this template
+-->
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>Alta Tour</title>
+        <meta charset="UTF-8">
+<!-- Bootstrap CSS v5.2.1 -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+<!-- Bootstrap CSS v5.2.1 -->
+
+<style>
+.container {
+        display: flex;
+        flex-direction: column;
+        
+    }
+    
+    #map {
+        height: 450px;
+        width: 80%;
+        margin-bottom: 20px;
+    }
+    
+    .botones {
+        height: 50px;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+
+    }
+    </style>
+
+    </head>
+    <body class="container">
+<!-- navbar  -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+<div class="">
+    <form action="#" th:action="@{/altatour}" th:object="${tour}" method="post">
+        <div class="form-group">
+            <label for="nombre">ID_guia</label>  
+            <p><input name="codguia" type="hidden" id="codguia" value="" th:field="*{id_guia}" /></p>
+            <label for="nombre">Nombre del Tour</label>
+                <input type="text" class="form-control"  th:field="*{nombre_tour}"/>
+            <label for="inputPassword4" class="form-label" ID="id_ciudad">CIUDAD DE RESIDENCIA</label>
+                <select class="form-control" id="periodo" name="idCiudad" th:field="*{id_ciudad}">
+                  <option th:each="p : ${periodos}"
+                    th:value="${p.id}"
+                    th:text="${p.nombre}">
+                  </option>
+                </select>
+
+        </div>
+        <!-- Agregar otros campos del formulario -->
+        <div class ="py-3">
+            <button type="submit" class="btn btn-primary col-12">Enviar</button>
+        </div>
+    </form>
+    <a href="listarciudades">Atras</a>
+    <a href="main.html">Menu principal</a>
+
+    
+        
+   
+</div>
+
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+    integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
+        
+
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+    integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
+  </script>
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCWCC1tsoGjIRjAoDvs2YpXcXG2s1x8CxA&callback=initMap"></script>
+    <script>
+  // obtiene el valor del parámetro codguia de la URL
+  const urlParams = new URLSearchParams(window.location.search);
+  const codguia = urlParams.get('codguia');
+
+  // verifica que se esté recibiendo correctamente el valor del parámetro codguia
+  if (codguia) {
+    console.log("El valor del ID de guía recibido es: " + codguia);
+  } else {
+    console.log("No se ha recibido el valor del ID de guía");
+  }
+  document.getElementById('codguia').value = codguia;
+</script>
+    
+<!-- Bootstrap JavaScript Libraries -->
+    </body>
+</html>
+

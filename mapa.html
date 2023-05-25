@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Mapa de Madrid</title>
+
+    <script>
+      
+    </script>
+    <style>
+      #map {
+        height: 65%;
+        width: 43%;
+        margin: 3%;
+
+      }
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="map"></div>
+    <div class="botones" style="display: inline-block;"></div>
+    <button id="button">BORRAR TODOS LOS MARCADORES</button>
+    
+
+    <label for="nombre" >marcadores</label>
+            <input type="text" placeholder="coordenadas" id="latYlong">
+            <button type="submit">Crear Tour</button>
+            
+    <!-- <button id="deleteRouteButton">BORRAR RUTA</button> -->
+    <script src="mapa.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCWCC1tsoGjIRjAoDvs2YpXcXG2s1x8CxA&callback=initMap"></script>
+    
+  </body>
+</html>
+
+

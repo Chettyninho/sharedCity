@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this template
+-->
+<html>
+
+    <head>
+        <title>altaGuia</title>
+    </head>
+    <body>
+        <header></header>
+        <main>
+            <h1>Alta Guia</h1>
+            <div>susario registrado, vuelve a la pagina principal</div>
+            <p th:text="'DNI ' + ${g2.dni}" />
+            <p th:text="'NOMBRE: ' + ${g2.nombre_guia}" />
+            <p th:text="'APELLIDO 1 ' + ${g2.apellido_guia_1}" />
+            <p th:text="'APELLIDO 2 ' + ${g2.apellido_guia_2}" />
+            <p th:text="'VALORACION ' + ${g2.valoracion_guia}" />
+            <p th:text="'CIUDAD DE RESIDENCIA ' + ${g2.ciudad_residencia}" />
+            <p th:text="'IDIOMAS ' + ${g2.idiomas}" />
+        </main>
+        <footer></footer>
+    </body>
+
+</html>

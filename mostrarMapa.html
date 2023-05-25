@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this template
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    #map {
+      margin: auto;
+      margin-top: 6%;
+      height: 100%;
+      width: 50%;
+      height: 75%;
+    }
+    html, body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+    }
+  </style>
+    </head>
+    <body>
+        <div>
+            <div>
+                <p>ID:</p>
+                <input type="number" th:value="${param.codtour}" th:name="codtour" readonly>
+            </div>
+        <p>Resultado:</p>
+        <p th:text="${mapaRuta}" id="coordenadas"></p>
+    </div>
+    <div id="map"></div>
+  <script src="mapa.js"></script>
+  <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAEwFPIe8sqd3c-XO1vyZH42XPSnZxZJxQ&callback=initMap">
+  </script>
+    </body>
+</html>

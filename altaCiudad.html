@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>altaCiudad</title>
+    </head>
+    <body>
+        <header></header>
+        <main>
+            <h1>Alta Ciudad</h1>
+            <form th:action="@{/altaciudad}" th:object = "${c1}" method = "post">
+
+                <div class="col-md-3">
+                    <label for="inputPassword4" class="form-label">NOMBRE</label>
+                    <input type="text" th:field="*{nombre}" />
+                </div>
+                <div class="col-md-3">
+                    <label for="inputPassword4" class="form-label">pais</label>
+                    <input type="text" th:field="*{pais}" />
+                </div>
+ 
+
+                <div class="col-6 ">
+                    <button type="submit" class="btn btn-primary" >Sign in</button>
+                    
+                </div>
+                <div class="col-6">
+                    <button type="reset" value="Reset">RESET</button>
+                </div>
+            </form>
+        </main>
+        <a href="crud">Volver?</a>
+        <footer></footer>
+    </body>
+
+</html>
